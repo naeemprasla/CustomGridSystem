@@ -1,0 +1,35 @@
+
+/* === SMALL PHONES === */
+@mixin small-mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+/* === PHONES === */
+@mixin mobile {
+  @media (min-width: 480px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+/* === TABLETS === */
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1080px) {
+    @content;
+  }
+}
+
+/* === DESKTOP === */
+@mixin desktop {
+  @media (min-width: 1080px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+/* === LARGE DESKTOP === */
+@mixin large-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

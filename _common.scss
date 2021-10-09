@@ -1,0 +1,44 @@
+
+
+/* == Flex == */
+@mixin u_flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+
+
+/* SPACING Padding & Margin
+   ============================= */
+
+@each $range in $ranges {
+  @each $side in $sides {
+    .u-p#{str-slice($side, 0, 1)}__#{$range} {
+      padding-#{$side}: #{$range}px !important;
+    }
+    .u-m#{str-slice($side, 0, 1)}__#{$range} {
+      margin-#{$side}: #{$range}px !important;
+    }
+  }
+}
+
+/* == Width == */
+.u-width__25 {
+  width: 25%;
+}
+
+.u-width__50 {
+  width: 50%;
+}
+
+.u-width__75 {
+  width: 75%;
+}
+
+.u-width__100 {
+  width: 100%;
+}
+
