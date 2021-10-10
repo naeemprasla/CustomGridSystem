@@ -15,21 +15,21 @@
 
 /* === TABLETS === */
 @mixin tablet {
-  @media (min-width: 768px) and (max-width: 1080px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
     @content;
   }
 }
 
 /* === DESKTOP === */
 @mixin desktop {
-  @media (min-width: 1080px) and (max-width: 1200px) {
+  @media (min-width: 1024px) and (max-width: 1170px) {
     @content;
   }
 }
 
 /* === LARGE DESKTOP === */
 @mixin large-desktop {
-  @media (min-width: 1200px) {
+  @media (min-width: 1170px) {
     @content;
   }
 }

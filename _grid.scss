@@ -24,14 +24,21 @@
    ============================= */
 .u_row {
   display: flex;
-  flex-wrap: wrap;
+  width: 100%;
 }
+@include small-mobile { 
+  .u_row {
+  display: block;
+  width: 100%;
+  }
+}
+
 
 /* COLUMN
    ============================= */
 @for $block from 1 through $columns {
   .u-col__#{$block} {
-    flex-basis: $block / $columns * 100%;
+    width: $block / $columns * 100%;
   }
 }
 
@@ -42,7 +49,7 @@
 @include small-mobile {
   @for $block from 1 through $columns {
     .u-col__xs--#{$block} {
-      flex-basis: $block / $columns * 100%;
+      width: $block / $columns * 100%;
     }
   }
   @for $block from 1 through $columns {
@@ -60,7 +67,7 @@
 @include mobile {
   @for $block from 1 through $columns {
     .u-col__sm--#{$block} {
-      flex-basis: $block / $columns * 100%;
+      width: $block / $columns * 100%;
     }
   }
   @for $u-offset from 1 through $columns {
@@ -78,7 +85,7 @@
 @include tablet {
   @for $block from 1 through $columns {
     .u-col__md--#{$block} {
-      flex-basis: $block / $columns * 100%;
+      width: $block / $columns * 100%;
     }
   }
   @for $u-offset from 1 through $columns {
@@ -96,7 +103,7 @@
 @include desktop {
   @for $block from 1 through $columns {
     .u-col__lg--#{$block} {
-      flex-basis: $block / $columns * 100%;
+      width: $block / $columns * 100%;
     }
   }
   @for $u-offset from 1 through $columns {
@@ -114,7 +121,7 @@
 @include large-desktop {
   @for $block from 1 through $columns {
     .u-col__xl--#{$block} {
-      flex-basis: $block / $columns * 100%;
+      width: $block / $columns * 100%;
     }
   }
   @for $u-offset from 1 through $columns {
